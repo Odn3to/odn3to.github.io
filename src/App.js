@@ -1,46 +1,70 @@
 import React from 'react';
+import { Layout, Menu, Divider } from 'antd';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Sobre from './Components/sobre/sobre';
+import Projetos from './Components/projetos/projetos';
+import Contato from './Components/contatos/contato';
+import { MailOutlined, LinkedinOutlined, GithubOutlined,
+    AppstoreOutlined, ContactsOutlined, UnorderedListOutlined } from '@ant-design/icons';
 import './App.css';
+
+const { Header, Content, Footer } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <h1>Bem-vindo ao Meu Portfólio</h1>
-        <nav>
-          <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
-      </header>
+    <Router>
+      <Layout className="layout">
+        <Header>
+          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
+            <Menu.Item key="1" icon={<UnorderedListOutlined />}>
+              <Link to="/sobre">Sobre</Link>
+            </Menu.Item>
+            <Menu.Item key="2" icon={<AppstoreOutlined />}>
+              <Link to="/projetos">Projetos</Link>
+            </Menu.Item>
+            <Menu.Item key="3" icon={<ContactsOutlined />}>
+              <Link to="/contato">Contato</Link>
+            </Menu.Item>
+          </Menu>
+        </Header>
 
-      <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p>Olá! Eu sou Odilon Martins, um desenvolvedor apaixonado por criar soluções incríveis.</p>
-      </section>
+        <Content className="content-container">
+          <div className="site-layout-content">
+            <Routes>
+              <Route path="/sobre" element={<Sobre />} />
+              <Route path="/projetos" element={<Projetos />} />
+              <Route path="/contato" element={<Contato />} />
+            </Routes>
+          </div>
+        </Content>
 
-      <section id="projetos">
-        <h2>Meus Projetos</h2>
-        <div className="projeto">
-          <h3>Projeto 1</h3>
-          <p>Descrição breve do projeto.</p>
-        </div>
-        <div className="projeto">
-          <h3>Projeto 2</h3>
-          <p>Descrição breve do projeto.</p>
-        </div>
-      </section>
-
-      <section id="contato">
-        <h2>Contato</h2>
-        <p>Você pode entrar em contato comigo pelo e-mail: <a href="mailto:seuemail@example.com">seuemail@example.com</a></p>
-      </section>
-
-      <footer>
-        <p>&copy; 2024 Meu Portfólio. Todos os direitos reservados.</p>
-      </footer>
-    </div>
+        <Footer style={{ textAlign: 'center', color: 'white', backgroundColor: '#001f3f' }}>
+          <Divider style={{ backgroundColor: 'white' }} />
+          <div style={{ marginBottom: '10px' }}>
+            <a href="mailto:odneto8812@gmail.com" style={{ margin: '0 10px', color: 'white' }}>
+              <MailOutlined style={{ fontSize: '24px' }} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/eng-odilonmartins/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ margin: '0 10px', color: 'white' }}
+            >
+              <LinkedinOutlined style={{ fontSize: '24px' }} />
+            </a>
+            <a
+              href="https://github.com/Odn3to"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ margin: '0 10px', color: 'white' }}
+            >
+              <GithubOutlined style={{ fontSize: '24px' }} />
+            </a>
+          </div>
+          <span style={{ color: 'white' }}>Odn3to ©2024. Todos os direitos reservados.</span>
+        </Footer>
+      </Layout>
+    </Router>
   );
 }
 

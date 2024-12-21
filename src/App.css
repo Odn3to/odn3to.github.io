@@ -1,0 +1,9 @@
+.ant-menu-item-selected {
+    background-color: #001f3f !important; /* Mesma cor do fundo da tela */
+    color: white !important; /* Contraste adequado */
+}
+
+.content-container {
+    min-height: calc(100vh - 220px);
+    background-color: #001f3f;
+  }

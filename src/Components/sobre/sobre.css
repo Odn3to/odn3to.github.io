@@ -1,0 +1,83 @@
+/* Estilo geral da tela */
+.sobre-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(180deg, #001428 0%, #001f3f 100%); /* Degradê do menu (#001428) ao fundo (#001f3f) */
+    color: white;
+    min-height: 100vh;
+  }
+  
+  .sobre-conteudo {
+    max-width: 50%;
+  }
+  
+  .sobre-titulo {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .sobre-descricao {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #d1d1d1; /* Cor para contraste */
+  }
+  
+  .sobre-imagem {
+    max-width: 40%;
+  }
+  
+  .imagem-destaque {
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    border-radius: 10px; /* Arredondar as bordas */
+  }
+
+
+  /* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .sobre-conteudo {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .sobre-titulo {
+        font-size: 2.5rem;
+    }
+
+    .sobre-descricao {
+        font-size: 1rem;
+    }
+
+    .sobre-imagem {
+        max-width: 100%;
+    }
+
+    .imagem-destaque {
+        max-width: 300px;
+    }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+    .sobre-titulo {
+        font-size: 2rem;
+    }
+
+    .sobre-descricao {
+        font-size: 0.9rem;
+    }
+
+    .imagem-destaque {
+        max-width: 250px;
+    }
+}
