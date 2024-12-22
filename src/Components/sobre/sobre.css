@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    background: linear-gradient(180deg, #001428 0%, #001f3f 100%); /* Degradê do menu (#001428) ao fundo (#001f3f) */
+    background: linear-gradient(180deg, #001428 0%, #001f3f 100%);
     color: white;
     min-height: 100vh;
   }
@@ -22,7 +22,7 @@
   .sobre-descricao {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #d1d1d1; /* Cor para contraste */
+    color: #d1d1d1;
   }
   
   .sobre-imagem {
@@ -33,7 +33,7 @@
     width: 100%;
     max-width: 400px;
     object-fit: cover;
-    border-radius: 10px; /* Arredondar as bordas */
+    border-radius: 10px;
   }
 
 

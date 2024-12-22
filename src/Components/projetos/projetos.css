@@ -83,15 +83,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
-    cursor: zoom-in; /* Cursor indicando que o zoom é possível */
+    overflow: hidden;
+    cursor: zoom-in;
   }
   
   .modal-image {
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 90vh; /* Limita a altura da imagem ao tamanho da tela */
+    max-height: 90vh;
     border-radius: 10px;
     object-fit: contain;
   }

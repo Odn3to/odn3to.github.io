@@ -3,7 +3,7 @@ import { Typography,  Row, Divider, Col} from 'antd';
 import { MailOutlined, LinkedinOutlined, GithubOutlined, PhoneOutlined } from '@ant-design/icons';
 import './contato.css'
 
-const { Title, Paragraph } = Typography;
+const { Title } = Typography;
 
 const Contato = () => (
     
