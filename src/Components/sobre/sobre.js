@@ -5,7 +5,7 @@ import fotoWelcome from '../../assets/foto_welcome.jpg';
 
 const descricao = `Olá! Eu sou Odilon Martins, um desenvolvedor apaixonado por criar soluções inovadoras e impactantes.
     Trabalho com projetos de desenvolvimento web desde 2021, focando em interfaces limpas e uma experiência de usuário impecável. 
-    Atuo no desdenvolvimento em Javascript, Typescript, PHP, Golang, C++, entre outras. Tenho experiência em React, JQuery, Gin,
+    Atuo no desdenvolvimento em Javascript, Typescript, PHP, Python, Golang, C++, entre outras. Tenho experiência em React, JQuery, Gin,
     Angular, e outros mais. Busco sempre o conhecimento e atualização das Skills e tecnologias. Amante por completo pelo desenvolvimento
     de Softawares.`
 
